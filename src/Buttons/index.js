@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Buttons = ({tasks, hideDoneTasks}) => {
+const Buttons = ({tasks, hideDone}) => {
 if(tasks.lenght ===0){
     return null
 }
@@ -9,7 +9,7 @@ return (
         <div className="buttons">
         <button className={`buttons__button
         ${tasks.some(({ done }) => done ) ? "" : "disabled"}`}>
-          {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+          {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </button>
         <button 
         className="buttons__button"
